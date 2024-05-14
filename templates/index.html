@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+<section
+  class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row"
+>
+
+  <!-- content - start -->
+  <div
+    class="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24"
+  >
+    <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
+      Very proud to introduce
+    </p>
+
+    <h1
+      class="mb-8 text-4xl font-bold text-black sm:text-5xl md:mb-12 md:text-6xl"
+    >
+      Revolutionary way to build the web
+    </h1>
+
+    
+
+    <div
+      class="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start"
+    >
+      <a
+        href="#"
+        class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+        >Start now</a
+      >
+
+      <a
+        href="#"
+        class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base"
+        >Take tour</a
+      >
+    </div>
+  </div>
+  <!-- content - end -->
+
+  <!-- image - start -->
+  <div class="h-32 overflow-hidden rounded-lg bg-gray-100 lg:h-auto xl:w-5/12">
+    <img
+      src="/static/img/man.png"
+      loading="lazy"
+      alt="Photo by Fakurian Design"
+      class="object-cover object-center"
+    />
+  </div>
+  <!-- image - end -->
+  
+</section>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+<div class=" mb-6 flex items-end justify-center gap-4">
+  <h2 class="text-2xl text-center font-bold text-gray-800 lg:text-3xl">Django Simple projects</h2>
+</div>
+
+<br>
+
+<div class="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-3">
+  <!-- product - start -->
+  <div>
+    <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
+      <img src="/static/img/calc.jpg" loading="lazy" alt="Photo by Austin Wade" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+    </a>
+
+    <div class="flex flex-col">
+      <span class="text-gray-500">Django</span>
+      <a href="/calculator" class="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Simple Calculator</a>
+    </div>
+  </div>
+  <!-- product - end -->
+
+  <!-- product - start -->
+  <div>
+    <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-2">
+      <img src="/static/img/marksheet.jpg" loading="lazy" alt="Photo by engin akyurt" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+    </a>
+
+    <div class="flex flex-col">
+      <span class="text-gray-500">Django</span>
+      <a href="/marksheet" class="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Marksheet</a>
+    </div>
+  </div>
+  <!-- product - end -->
+
+  <!-- product - start -->
+  <div>
+    <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-2">
+      <img src="/static/img/number.png" loading="lazy" alt="Photo by engin akyurt" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+    </a>
+
+    <div class="flex flex-col">
+      <span class="text-gray-500">Django</span>
+      <a href="/evenodd" class="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">Even Odd</a>
+    </div>
+  </div>
+  <!-- product - end -->
+</div>
+</div>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <!-- text - start -->
+    <div class="mb-10 md:mb-16">
+      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Our Features</h2>
+    </div>
+    <!-- text - end -->
+    
+
+<form class="max-w-md mx-auto" method="get">   
+  <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-dark">Search</label>
+  <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+      </div>
+      <input type="search" value="{{ft}}" name="featurename" id="default-search" class="block w-full p-4 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="search here...."  />
+      <button type="submit"  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+  </div>
+</form>
+ <br>
+
+
+    <div class="grid gap-4 sm:grid-cols-2 md:gap-8 xl:grid-cols-3">
+      <!-- feature - start -->
+      {% for n in featuresData %}
+
+      <div class="flex divide-x rounded-lg border bg-gray-50">
+        <div class="flex items-center p-2 text-indigo-500 md:p-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="{{n.feature_icon}}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+
+        <div class="p-4 md:p-6">
+          <h3 class="mb-2 text-lg font-semibold md:text-xl">{{n.feature_title}}</h3>
+          <p class="text-gray-500">{{n.feature_desc}}</p>
+        </div>
+      </div>
+      <!-- feature - end -->
+      {% empty %}
+      No Data Found
+     {% endfor %}
+      
+    </div>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2
+          class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"
+        >
+          Marksheet
+        </h2>
+      </div>
+      <!-- text - end -->
+  
+      <!-- form - start -->
+      <form
+        class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
+        method="post"
+      >
+        {% csrf_token %}
+        <div class="sm:col-span-2">
+          <label
+            for="subject1"
+            class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+            >Subject 1*</label
+          >
+          <input
+            name="subject1"
+            value="{{s1}}"
+            class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            required
+            />
+        </div>
+  
+        <div class="sm:col-span-2">
+            <label
+              for="subject2"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Subject 2*</label
+            >
+            <input
+              name="subject2"
+              value="{{s2}}"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              required
+              />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="subject3"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Subject 3*</label
+            >
+            <input
+              name="subject3"
+              value="{{s3}}"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              required
+              />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="subject4"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Subject 4*</label
+            >
+            <input
+              name="subject4"
+              value="{{s4}}"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              required
+              />
+          </div>
+        
+          <div class="sm:col-span-2">
+            <label
+              for="subject5"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Subject 5*</label
+            >
+            <input
+              name="subject5"
+              value="{{s5}}"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              required
+              />
+          </div>
+  
+        <div class="flex items-center justify-between sm:col-span-2">
+          <button
+            class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+          >
+            Calculate
+          </button>
+          <span class="text-sm text-gray-500">*Required</span>
+        </div>
+  
+        <div class="sm:col-span-2">
+          <label
+            for="total"
+            class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+            >Total</label
+          >
+          <input
+            name="total"
+            class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+            value="{{total}}"
+          />
+        </div>
+
+        <div class="sm:col-span-2">
+            <label
+              for="percentage"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Percentage</label
+            >
+            <input
+              name="percentage"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              value="{{percentage}}"
+            />
+          </div>
+        
+          <div class="sm:col-span-2">
+            <label
+              for="grade"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Grade</label
+            >
+            <input
+              name="grade"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              value="{{grade}}"
+            />
+          </div>
+      </form>
+      <!-- form - end -->
+    </div>
+  </div>
+{% endblock %}

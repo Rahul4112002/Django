@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2
+          class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl"
+        >
+          Even Odd
+        </h2>
+      </div>
+      <!-- text - end -->
+  
+      <!-- form - start -->
+      <form
+        class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
+        method="post"
+      >
+      {% if error %}
+      <div class="sm:col-span-2 text-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Error!</strong>
+        <span class="block sm:inline">Please enter the value.</span>
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+          <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+        </span>
+      </div>
+      {% endif %}
+        {% csrf_token %}
+        <div class="sm:col-span-2">
+          <label
+            for="number"
+            class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+            >Enter the Number*</label
+          >
+          <input
+            name="number"
+            value="{{n}}"
+            class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+        
+            />
+        </div>
+
+        <div class="flex items-center justify-between sm:col-span-2">
+            <button
+              class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+            >
+              Check
+            </button>
+  
+          </div>
+    
+          <div class="sm:col-span-2">
+            <label
+              for="output"
+              class="mb-2 inline-block text-sm text-gray-800 sm:text-base"
+              >Output*</label
+            >
+            <input
+              name="output"
+              class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
+              value="{{ans}}"
+              
+            />
+          </div>
+        </form>
+
+
+{% endblock %}
